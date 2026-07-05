@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+html,body{margin:0;padding:0;overflow:hidden;background:#0d0a08;overscroll-behavior:none;height:100%}
+@keyframes idleDash{0%{transform:translateY(-12px)}55%{transform:translateY(32px)}100%{transform:translateY(32px)}}
+@keyframes growX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blinkDot{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@keyframes waveBar{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+@keyframes recPulse{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes dotPulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.35)}70%{box-shadow:0 0 0 7px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@keyframes dotTo78{from{left:2%}to{left:78%}}
+@keyframes dotTo50{from{left:2%}to{left:50%}}
+@keyframes dotTo33{from{left:1%}to{left:33%}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes popIn{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes mCartwheel{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes mJiggle{0%,10%,100%{transform:rotate(0deg)}2%{transform:rotate(-4deg)}4%{transform:rotate(3.2deg)}6%{transform:rotate(-2.2deg)}8%{transform:rotate(1.2deg)}}
+</style>
+</helmet>
+
+<section data-screen-label="02 What is buildr" style="position:fixed;inset:0;overflow:hidden;background:#fbfaf7;will-change:transform;transform:{{c1t}};z-index:{{c1z}};transition:{{c1tr}}">
+  <div style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(16px,2.8vh,30px);max-width:1200px;margin:0 auto;padding:0 5vw;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;box-sizing:border-box">
+    <h2 style="margin:0;font-size:clamp(30px,6vw,86px);font-weight:800;letter-spacing:-0.02em;color:#0d0a08;line-height:1.1">
+      <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 0s,opacity .5s ease 0s">w</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .04s,opacity .5s ease .04s">h</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .08s,opacity .5s ease .08s">a</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .12s,opacity .5s ease .12s">t</span></span> <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .18s,opacity .5s ease .18s">i</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .22s,opacity .5s ease .22s">s</span></span> <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .28s,opacity .5s ease .28s">b</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .32s,opacity .5s ease .32s">u</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .36s,opacity .5s ease .36s">i</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .40s,opacity .5s ease .40s">l</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .44s,opacity .5s ease .44s">d</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .48s,opacity .5s ease .48s">r</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .52s,opacity .5s ease .52s">.</span></span>
+    </h2>
+    <div style="background:#0d0a08;color:#ffffff;padding:clamp(16px,3.4vh,36px) clamp(18px,3.4vw,44px);border-radius:6px;font-size:clamp(15px,2.5vw,34px);font-weight:700;line-height:1.45;opacity:{{s2o}};transition:opacity .9s ease .6s">buildr. is the all-in-one platform connecting freelancers, co-founders, and job seekers with the right people, all in one place</div>
+    <h2 style="margin:0;font-size:clamp(30px,6vw,86px);font-weight:800;letter-spacing:-0.02em;color:#0d0a08;line-height:1.1">
+      <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .75s,opacity .5s ease .75s">h</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .79s,opacity .5s ease .79s">o</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .83s,opacity .5s ease .83s">w</span></span> <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .89s,opacity .5s ease .89s">d</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .93s,opacity .5s ease .93s">o</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) .97s,opacity .5s ease .97s">e</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.01s,opacity .5s ease 1.01s">s</span></span> <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.07s,opacity .5s ease 1.07s">b</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.11s,opacity .5s ease 1.11s">u</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.15s,opacity .5s ease 1.15s">i</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.19s,opacity .5s ease 1.19s">l</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.23s,opacity .5s ease 1.23s">d</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.27s,opacity .5s ease 1.27s">r</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.31s,opacity .5s ease 1.31s">.</span></span> <span style="display:inline-block;white-space:nowrap"><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.37s,opacity .5s ease 1.37s">w</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.41s,opacity .5s ease 1.41s">o</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.45s,opacity .5s ease 1.45s">r</span><span style="display:inline-block;transform:{{s2t}};opacity:{{s2o}};transition:transform .7s cubic-bezier(.22,1,.36,1) 1.49s,opacity .5s ease 1.49s">k</span></span>
+    </h2>
+    <div style="background:#0d0a08;color:#ffffff;padding:clamp(16px,3.4vh,36px) clamp(18px,3.4vw,44px);border-radius:6px;font-size:clamp(15px,2.5vw,34px);font-weight:700;line-height:1.45;opacity:{{s2o}};transition:opacity .9s ease 1.55s">buildr. splits the experience into three dedicated zones — freelance, co-founder, and jobs — so you only ever see what's relevant to you</div>
+  </div>
+</section>
+
+<section data-screen-label="03 Explore" style="position:fixed;inset:0;overflow:hidden;background:#0d0a08;will-change:transform;transform:{{c2t}};z-index:{{c2z}};transition:{{c2tr}}">
+  <div style="height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(20px,3.5vh,38px);padding:0 6vw;box-sizing:border-box;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">
+    <p style="margin:0;max-width:880px;text-align:center;color:#ffffff;font-size:clamp(17px,2.9vw,42px);font-weight:800;letter-spacing:-0.01em;line-height:1.35">
+      <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 0s,opacity .6s ease 0s">with</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .05s,opacity .6s ease .05s">buildr.</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .1s,opacity .6s ease .1s">we</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .15s,opacity .6s ease .15s">are</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .2s,opacity .6s ease .2s">aiming</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .25s,opacity .6s ease .25s">to</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .3s,opacity .6s ease .3s">bring</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .35s,opacity .6s ease .35s">a</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .4s,opacity .6s ease .4s">change</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .45s,opacity .6s ease .45s">to</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .5s,opacity .6s ease .5s">how</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .55s,opacity .6s ease .55s">we</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .6s,opacity .6s ease .6s">find</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .65s,opacity .6s ease .65s">work</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .7s,opacity .6s ease .7s">—</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .75s,opacity .6s ease .75s">and</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .8s,opacity .6s ease .8s">the</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .85s,opacity .6s ease .85s">people</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .9s,opacity .6s ease .9s">we</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) .95s,opacity .6s ease .95s">want</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1s,opacity .6s ease 1s">to</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.05s,opacity .6s ease 1.05s">work</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.1s,opacity .6s ease 1.1s">with</span>
+    </p>
+    <p style="margin:0;text-align:center;color:#ffffff;font-size:clamp(14px,2.2vw,32px);font-weight:800;letter-spacing:-0.01em;line-height:1.35">
+      <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.25s,opacity .6s ease 1.25s">explore</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.3s,opacity .6s ease 1.3s">each</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.35s,opacity .6s ease 1.35s">section</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.4s,opacity .6s ease 1.4s">to</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.45s,opacity .6s ease 1.45s">learn</span> <span style="display:inline-block;transform:{{s3t}};opacity:{{s3o}};transition:transform .8s cubic-bezier(.22,1,.36,1) 1.5s,opacity .6s ease 1.5s">how</span>
+    </p>
+    <div style="display:{{carDisp}};position:relative;width:100%;height:min(70vw,320px);margin-top:1vh">
+      <div onClick="{{ mTap0 }}" style="position:absolute;left:50%;top:50%;width:min(62vw,290px);aspect-ratio:1;transform:{{mc0T}};z-index:{{mc0Z}};filter:{{mc0F}};opacity:{{boxO}};transition:{{mcTr}},opacity .7s ease 1.2s;cursor:pointer">
+        <div style="position:absolute;inset:0;animation:{{mAnim0}}">
+          <div style="position:absolute;inset:0;border-radius:20px;overflow:hidden;background:#ffffff">
+            <img src="assets/illu-whiteboard.png" alt="Jobs" style="width:100%;height:100%;object-fit:cover;pointer-events:none">
+            <div style="position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;line-height:1">+</div>
+          </div>
+        </div>
+      </div>
+      <div onClick="{{ mTap1 }}" style="position:absolute;left:50%;top:50%;width:min(62vw,290px);aspect-ratio:1;transform:{{mc1T}};z-index:{{mc1Z}};filter:{{mc1F}};opacity:{{boxO}};transition:{{mcTr}},opacity .7s ease 1.35s;cursor:pointer">
+        <div style="position:absolute;inset:0;animation:{{mAnim1}}">
+          <div style="position:absolute;inset:0;border-radius:20px;overflow:hidden;background:#ffffff">
+            <img src="assets/illu-desk.png" alt="Cofounder" style="width:100%;height:100%;object-fit:cover;pointer-events:none">
+            <div style="position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;line-height:1">+</div>
+          </div>
+        </div>
+      </div>
+      <div onClick="{{ mTap2 }}" style="position:absolute;left:50%;top:50%;width:min(62vw,290px);aspect-ratio:1;transform:{{mc2T}};z-index:{{mc2Z}};filter:{{mc2F}};opacity:{{boxO}};transition:{{mcTr}},opacity .7s ease 1.5s;cursor:pointer">
+        <div style="position:absolute;inset:0;animation:{{mAnim2}}">
+          <div style="position:absolute;inset:0;border-radius:20px;overflow:hidden;background:#ffffff">
+            <img src="assets/illu-office.png" alt="Freelancer" style="width:100%;height:100%;object-fit:cover;pointer-events:none">
+            <div style="position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;line-height:1">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:{{rowDisp}};gap:clamp(20px,2.6vw,36px);justify-content:center;flex-wrap:wrap;margin-top:1vh">
+      <div onClick="{{ openCard0 }}" onMouseMove="{{ cardMove }}" onMouseLeave="{{ cardLeave }}" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1;border-radius:22px;cursor:pointer;transform:{{boxT}};opacity:{{boxO}};transition:transform .9s cubic-bezier(.22,1,.36,1) 1.35s,opacity .7s ease 1.35s,box-shadow .35s ease" style-hover="box-shadow:0 22px 60px rgba(255,255,255,.14)">
+        <div style="position:absolute;inset:0;transform:{{flip0}};transition:{{flipTr}};transform-style:preserve-3d">
+          <div style="position:absolute;inset:0;border-radius:22px;overflow:hidden;background:#ffffff;backface-visibility:hidden;-webkit-backface-visibility:hidden">
+            <img src="assets/illu-whiteboard.png" alt="Co-founders sketching at a whiteboard" style="width:100%;height:100%;object-fit:cover;transform:scale(1.12);opacity:{{img0O}};transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .55s ease;pointer-events:none">
+            <div style="position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:600;line-height:1">+</div>
+          </div>
+          <div style="position:absolute;inset:0;border-radius:22px;background:#0d0a08;border:1px solid rgba(255,255,255,.25);box-sizing:border-box;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center">
+            <span style="color:#ffffff;font-size:clamp(22px,2.6vw,34px);font-weight:900;letter-spacing:-0.02em">jobs</span>
+          </div>
+        </div>
+      </div>
+      <div onClick="{{ openCard1 }}" onMouseMove="{{ cardMove }}" onMouseLeave="{{ cardLeave }}" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1;border-radius:22px;cursor:pointer;transform:{{boxT}};opacity:{{boxO}};transition:transform .9s cubic-bezier(.22,1,.36,1) 1.5s,opacity .7s ease 1.5s,box-shadow .35s ease" style-hover="box-shadow:0 22px 60px rgba(255,255,255,.14)">
+        <div style="position:absolute;inset:0;transform:{{flip1}};transition:{{flipTr}};transform-style:preserve-3d">
+          <div style="position:absolute;inset:0;border-radius:22px;overflow:hidden;background:#ffffff;backface-visibility:hidden;-webkit-backface-visibility:hidden">
+            <img src="assets/illu-desk.png" alt="Freelancer working from home" style="width:100%;height:100%;object-fit:cover;transform:scale(1.12);opacity:{{img1O}};transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .55s ease;pointer-events:none">
+            <div style="position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:600;line-height:1">+</div>
+          </div>
+          <div style="position:absolute;inset:0;border-radius:22px;background:#0d0a08;border:1px solid rgba(255,255,255,.25);box-sizing:border-box;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center">
+            <span style="color:#ffffff;font-size:clamp(22px,2.6vw,34px);font-weight:900;letter-spacing:-0.02em">cofounder</span>
+          </div>
+        </div>
+      </div>
+      <div onClick="{{ openCard2 }}" onMouseMove="{{ cardMove }}" onMouseLeave="{{ cardLeave }}" style="position:relative;width:clamp(180px,22vw,280px);aspect-ratio:1;border-radius:22px;cursor:pointer;transform:{{boxT}};opacity:{{boxO}};transition:transform .9s cubic-bezier(.22,1,.36,1) 1.65s,opacity .7s ease 1.65s,box-shadow .35s ease" style-hover="box-shadow:0 22px 60px rgba(255,255,255,.14)">
+        <div style="position:absolute;inset:0;transform:{{flip2}};transition:{{flipTr}};transform-style:preserve-3d">
+          <div style="position:absolute;inset:0;border-radius:22px;overflow:hidden;background:#ffffff;backface-visibility:hidden;-webkit-backface-visibility:hidden">
+            <img src="assets/illu-office.png" alt="Job seeker at an office desk" style="width:100%;height:100%;object-fit:cover;transform:scale(1.12);opacity:{{img2O}};transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .55s ease;pointer-events:none">
+            <div style="position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:600;line-height:1">+</div>
+          </div>
+          <div style="position:absolute;inset:0;border-radius:22px;background:#0d0a08;border:1px solid rgba(255,255,255,.25);box-sizing:border-box;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center">
+            <span style="color:#ffffff;font-size:clamp(22px,2.6vw,34px);font-weight:900;letter-spacing:-0.02em">freelancer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="01 Hero" style="position:fixed;inset:0;overflow:hidden;background:#0d0a08;will-change:transform;transform:{{c0t}};z-index:{{c0z}};transition:{{c0tr}}">
+  <video autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+  <div style="position:absolute;inset:0;background:#0d0a08;mix-blend-mode:multiply;display:flex;align-items:center;justify-content:center">
+    <h1 style="margin:0;color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:900;font-size:min(30vw,55vh);letter-spacing:-0.05em;line-height:1">buildr.</h1>
+  </div>
+</section>
+
+<div style="position:fixed;left:30px;bottom:30px;z-index:99;display:flex;align-items:center;gap:11px;opacity:{{idleO}};transform:{{idleT}};transition:opacity .6s ease,transform .6s ease,color .5s ease;pointer-events:none;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">
+  <div style="position:relative;width:1.5px;height:32px;background:{{idleTrack}};overflow:hidden;transition:background .5s ease">
+    <div style="position:absolute;left:0;top:0;width:100%;height:11px;background:{{idleDash}};animation:idleDash 1.6s cubic-bezier(.65,.05,.36,1) infinite;transition:background .5s ease"></div>
+  </div>
+  <div style="font-size:10px;font-weight:600;letter-spacing:0.38em;color:{{idleText}};transition:color .5s ease">SCROLL</div>
+</div>
+
+
+<div style="position:fixed;inset:0;z-index:200;display:{{ovDisplay}};font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">
+  <div onClick="{{ closePanel }}" style="position:absolute;inset:0;background:rgba(5,4,3,.55);opacity:{{backO}};transition:opacity .5s ease"></div>
+  <div style="position:absolute;inset:0;display:flex;align-items:{{ovAlign}};justify-content:center;perspective:1800px;pointer-events:none">
+    <div style="pointer-events:auto;position:relative;width:{{pW}}px;height:{{pH}}px;transform:{{pT}};transition:{{pTr}};transform-style:preserve-3d">
+      <div style="position:absolute;inset:0;display:{{ffDisp}};background:#ffffff;border-radius:{{ffRad}};overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 40px 120px rgba(0,0,0,.45)">
+        <div style="position:absolute;inset:0;background-image:{{ffBg}};background-size:cover;background-position:center;transform:scale(1.12);opacity:{{ffImgO}};transition:{{ffImgTr}}"></div>
+        <div style="position:absolute;right:{{ffBadgeX}};bottom:{{ffBadgeY}};width:{{ffBadgeW}};height:{{ffBadgeH}};border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:{{ffBadgeF}};font-weight:600;line-height:1">+</div>
+      </div>
+      <div style="position:absolute;inset:0;background:#ffffff;border-radius:{{panelRad}};overflow:hidden;transform:{{backT}};backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 40px 120px rgba(0,0,0,.55)">
+      <div style="position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overflow-wrap:break-word;padding:{{panelPad}};box-sizing:border-box">
+
+        <sc-if value="{{showJobs}}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Panel: jobs">
+            <h3 style="margin:0;text-align:{{panelAlign}};font-size:clamp(32px,5.4vw,74px);font-weight:900;letter-spacing:-0.04em;color:#0d0a08;line-height:1">jobs</h3>
+            <p style="margin:10px auto 0;text-align:{{panelAlign}};font-size:clamp(15px,1.55vw,20px);font-weight:700;color:#4a453f;max-width:640px">A job search that finally works for you.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vh,26px) clamp(18px,2.2vw,28px);margin-top:clamp(20px,3.4vh,34px)">
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .45s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">01</span><span style="font-size:13px;font-weight:800;color:#0d0a08">We cut the noise.</span></div>
+                <div style="font-size:clamp(16px,1.6vw,21px);font-weight:800;color:#0d0a08;margin-top:3px;letter-spacing:-0.01em">Reimagining your job search</div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">A feed tuned to you, not a wall of identical listings — only the roles worth your swipe make it through.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:18px;margin-top:12px;display:flex;flex-direction:column;gap:9px">
+                  <div style="height:8px;border-radius:4px;background:rgba(255,255,255,.16);width:88%"></div>
+                  <div style="height:8px;border-radius:4px;background:rgba(255,255,255,.10);width:70%"></div>
+                  <div style="height:8px;border-radius:4px;background:rgba(255,255,255,.10);width:52%"></div>
+                  <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+                    <div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.18);overflow:hidden"><div style="height:100%;width:98%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1.3s cubic-bezier(.22,1,.36,1) .8s both"></div></div>
+                    <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff;opacity:0;animation:fadeIn .5s ease 1.9s forwards">98% match</div>
+                  </div>
+                </div>
+              </div>
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .6s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">02</span><span style="font-size:13px;font-weight:800;color:#0d0a08">Skills first, paper later.</span></div>
+                <div style="font-size:clamp(16px,1.6vw,21px);font-weight:800;color:#0d0a08;margin-top:3px;letter-spacing:-0.01em">A no-résumé-first approach</div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">Show what you can actually do before anyone asks for a PDF. Your work leads; the CV can follow.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:18px;margin-top:12px;display:flex;flex-direction:column;gap:12px">
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:58px;flex-shrink:0;font-size:12px;font-weight:600;color:#ffffff">React</span><div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden"><div style="height:100%;width:92%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1s cubic-bezier(.22,1,.36,1) .7s both"></div></div><span style="width:32px;flex-shrink:0;text-align:right;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#9a9a9a">92%</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:58px;flex-shrink:0;font-size:12px;font-weight:600;color:#ffffff">Systems</span><div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden"><div style="height:100%;width:84%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1s cubic-bezier(.22,1,.36,1) .85s both"></div></div><span style="width:32px;flex-shrink:0;text-align:right;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#9a9a9a">84%</span></div>
+                  <div style="display:flex;align-items:center;gap:10px"><span style="width:58px;flex-shrink:0;font-size:12px;font-weight:600;color:#ffffff">Design</span><div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden"><div style="height:100%;width:76%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1s cubic-bezier(.22,1,.36,1) 1s both"></div></div><span style="width:32px;flex-shrink:0;text-align:right;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#9a9a9a">76%</span></div>
+                </div>
+              </div>
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .75s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">03</span><span style="font-size:13px;font-weight:800;color:#0d0a08">Get in early.</span></div>
+                <div style="font-size:clamp(16px,1.6vw,21px);font-weight:800;color:#0d0a08;margin-top:3px;letter-spacing:-0.01em">Early hiring for startups</div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">Meet teams before the seed round — when the title is bigger, the equity still means something and you can shape the thing.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:24px 18px 16px;margin-top:12px">
+                  <div style="position:relative;height:12px">
+                    <div style="position:absolute;left:0;right:0;top:5px;height:2px;border-radius:1px;background:rgba(255,255,255,.18)"></div>
+                    <div style="position:absolute;left:0;top:5px;width:33%;height:2px;border-radius:1px;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1.2s cubic-bezier(.22,1,.36,1) .7s both"></div>
+                    <div style="position:absolute;top:0;width:12px;height:12px;border-radius:50%;background:#ffffff;transform:translateX(-50%);animation:dotTo33 1.2s cubic-bezier(.22,1,.36,1) .7s both,dotPulse 2.4s ease 2.2s infinite"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;margin-top:10px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.12em">
+                    <span style="color:#9a9a9a">IDEA</span><span style="color:#ffffff">PRE-SEED</span><span style="color:#9a9a9a">SEED</span><span style="color:#9a9a9a">SERIES A</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{showCof}}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Panel: cofounder">
+            <h3 style="margin:0;text-align:{{panelAlign}};font-size:clamp(32px,5.4vw,74px);font-weight:900;letter-spacing:-0.04em;color:#0d0a08;line-height:1">cofounder</h3>
+            <p style="margin:10px auto 0;text-align:{{panelAlign}};font-size:clamp(15px,1.55vw,20px);font-weight:700;color:#4a453f;max-width:680px">Everything you need to find the person you'll build with.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vh,26px) clamp(18px,2.2vw,28px);margin-top:clamp(20px,3.4vh,34px)">
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .45s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">01</span><span style="font-size:clamp(15px,1.5vw,19px);font-weight:800;color:#0d0a08;letter-spacing:-0.01em">A soft NDA, built into the chat</span></div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">The moment you match, a soft NDA opens right inside the chatbox — a private, protected space to talk through the real idea, the numbers and the plan, with no lawyer-grade paperwork to slow you down.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:16px;margin-top:12px;display:flex;flex-direction:column;gap:9px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#ffffff;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#ffffff;display:inline-block"></span>Direct chat · Ishaan</div>
+                    <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.06em;color:#0d0a08;background:#ffffff;border-radius:999px;padding:3px 9px;font-weight:700">Soft NDA active</div>
+                  </div>
+                  <div style="align-self:flex-start;background:rgba(255,255,255,.14);color:#ffffff;font-size:12px;padding:8px 12px;border-radius:12px 12px 12px 4px;max-width:85%">So — what are you really building?</div>
+                  <div style="align-self:flex-end;background:#ffffff;color:#0d0a08;font-size:12px;font-weight:600;padding:8px 12px;border-radius:12px 12px 4px 12px;max-width:85%">Sending the deck. We're covered by the NDA.</div>
+                  <div style="align-self:flex-start;background:rgba(255,255,255,.14);border-radius:12px 12px 12px 4px;padding:9px 12px;display:flex;gap:4px;align-items:center">
+                    <span style="width:5px;height:5px;border-radius:50%;background:#ffffff;display:inline-block;animation:blinkDot 1.2s ease infinite"></span>
+                    <span style="width:5px;height:5px;border-radius:50%;background:#ffffff;display:inline-block;animation:blinkDot 1.2s ease .2s infinite"></span>
+                    <span style="width:5px;height:5px;border-radius:50%;background:#ffffff;display:inline-block;animation:blinkDot 1.2s ease .4s infinite"></span>
+                  </div>
+                </div>
+              </div>
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .6s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">02</span><span style="font-size:clamp(15px,1.5vw,19px);font-weight:800;color:#0d0a08;letter-spacing:-0.01em">Risk tolerance, on every card</span></div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">See exactly how much risk the person you're swiping on is up for — quit-tomorrow or moonlight-first — before you ever say hello.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:18px;margin-top:12px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                    <div style="font-size:13px;font-weight:700;color:#ffffff">Risk tolerance</div>
+                    <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 9px">High · 8 / 10</div>
+                  </div>
+                  <div style="position:relative;height:12px;margin-top:16px">
+                    <div style="position:absolute;left:0;right:0;top:5px;height:2px;border-radius:1px;background:rgba(255,255,255,.18)"></div>
+                    <div style="position:absolute;left:0;top:5px;width:78%;height:2px;border-radius:1px;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1.3s cubic-bezier(.22,1,.36,1) .7s both"></div>
+                    <div style="position:absolute;top:0;width:12px;height:12px;border-radius:50%;background:#ffffff;transform:translateX(-50%);animation:dotTo78 1.3s cubic-bezier(.22,1,.36,1) .7s both,dotPulse 2.4s ease 2.3s infinite"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;margin-top:10px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.14em;color:#9a9a9a"><span>MOONLIGHTING</span><span>ALL-IN</span></div>
+                </div>
+              </div>
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .75s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">03</span><span style="font-size:clamp(15px,1.5vw,19px);font-weight:800;color:#0d0a08;letter-spacing:-0.01em">A video intro, not a dead bio</span></div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">Every founder records a short video on who they are and what they're building, so you feel the conviction before you connect.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:18px;margin-top:12px;display:flex;align-items:center;gap:14px">
+                  <div style="width:42px;height:42px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:0;height:0;border-left:12px solid #0d0a08;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px"></div></div>
+                  <div style="display:flex;align-items:center;gap:3px;height:34px;flex:1">
+                    <div style="width:3px;height:45%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out 0s infinite"></div>
+                    <div style="width:3px;height:75%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.12s infinite"></div>
+                    <div style="width:3px;height:100%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.24s infinite"></div>
+                    <div style="width:3px;height:55%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.36s infinite"></div>
+                    <div style="width:3px;height:85%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.48s infinite"></div>
+                    <div style="width:3px;height:40%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.6s infinite"></div>
+                    <div style="width:3px;height:95%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.72s infinite"></div>
+                    <div style="width:3px;height:65%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.84s infinite"></div>
+                    <div style="width:3px;height:80%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -.96s infinite"></div>
+                    <div style="width:3px;height:50%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -1.08s infinite"></div>
+                    <div style="width:3px;height:90%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -1.2s infinite"></div>
+                    <div style="width:3px;height:60%;border-radius:2px;background:#ffffff;animation:waveBar .9s ease-in-out -1.32s infinite"></div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0">
+                    <div style="display:flex;align-items:center;gap:5px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.1em;color:#ffffff"><span style="width:6px;height:6px;border-radius:50%;background:#ffffff;display:inline-block;animation:recPulse 1.4s ease infinite"></span>REC</div>
+                    <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.08em;color:#9a9a9a">0:42 · Intro</div>
+                  </div>
+                </div>
+              </div>
+              <div style="flex:1 1 100%;min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .9s forwards">
+                <div style="background:#0d0a08;border-radius:14px;padding:18px 18px 0;overflow:hidden">
+                  <div style="display:flex;gap:13px;align-items:flex-start">
+                    <div style="width:34px;height:34px;border-radius:9px;background:#ffffff;color:#0d0a08;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0">₹</div>
+                    <div>
+                      <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.28em;color:#9a9a9a">BUILT FOR INDIA</div>
+                      <div style="font-size:16px;font-weight:800;color:#ffffff;margin-top:3px">Funding for Indian startups</div>
+                      <div style="font-size:12.5px;color:#b5b0ab;line-height:1.5;margin-top:5px;max-width:660px">We surface live grants for startups in India — central and state schemes, accelerator funds and seed support — so you know exactly what non-dilutive money you can chase from day one.</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:14px;background:#ffffff;border-radius:10px 10px 0 0;margin-top:14px;padding:10px 14px;overflow:hidden">
+                    <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.22em;color:#0d0a08;font-weight:700;flex-shrink:0">FOUNDERS BACKED BY</div>
+                    <div style="flex:1;overflow:hidden">
+                      <div style="display:flex;width:max-content;animation:ticker 16s linear infinite">
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">G</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">Guild Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">T</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">True Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">W</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">WTF Fund</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">B</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">Basis Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">T</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">Titan Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">G</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">Guild Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">T</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">True Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">W</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">WTF Fund</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">B</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">Basis Capital</span></div>
+                        <div style="display:flex;align-items:center;gap:7px;margin-right:28px;flex-shrink:0"><span style="width:16px;height:16px;border-radius:4px;background:#0d0a08;color:#ffffff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">T</span><span style="font-size:11px;font-weight:700;color:#0d0a08;white-space:nowrap">Titan Capital</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{showFre}}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Panel: freelancer">
+            <h3 style="margin:0;text-align:{{panelAlign}};font-size:clamp(32px,5.4vw,74px);font-weight:900;letter-spacing:-0.04em;color:#0d0a08;line-height:1">freelancer</h3>
+            <p style="margin:10px auto 0;text-align:{{panelAlign}};font-size:clamp(15px,1.55vw,20px);font-weight:700;color:#4a453f;max-width:640px">Find the work without losing your independence.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vh,26px) clamp(18px,2.2vw,28px);margin-top:clamp(20px,3.4vh,34px)">
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .45s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">01</span><span style="font-size:13px;font-weight:800;color:#0d0a08">Filter, don't swipe.</span></div>
+                <div style="font-size:clamp(16px,1.6vw,21px);font-weight:800;color:#0d0a08;margin-top:3px;letter-spacing:-0.01em">A directory built for scanning</div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">Slice every open gig by discipline, skill and budget. The rate is up front — reach out only when it actually fits.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:16px;margin-top:12px">
+                  <div style="display:flex;gap:6px">
+                    <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;font-weight:700;color:#0d0a08;background:#ffffff;border-radius:999px;padding:3px 10px">All</span>
+                    <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#cfcac5;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:3px 10px">Design</span>
+                    <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#cfcac5;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:3px 10px">Engineering</span>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+                    <div style="display:flex;align-items:center;gap:10px"><span style="width:30px;flex-shrink:0;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff">RG</span><div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden"><div style="height:100%;width:55%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1s cubic-bezier(.22,1,.36,1) .7s both"></div></div><span style="width:36px;flex-shrink:0;text-align:right;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#9a9a9a">$80</span></div>
+                    <div style="display:flex;align-items:center;gap:10px"><span style="width:30px;flex-shrink:0;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;font-weight:700;color:#0d0a08;background:#ffffff;border-radius:4px;padding:2px 0;text-align:center">AI</span><div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden"><div style="height:100%;width:82%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1s cubic-bezier(.22,1,.36,1) .85s both"></div></div><span style="width:36px;flex-shrink:0;text-align:right;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff">$120</span></div>
+                    <div style="display:flex;align-items:center;gap:10px"><span style="width:30px;flex-shrink:0;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff">DS</span><div style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden"><div style="height:100%;width:65%;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1s cubic-bezier(.22,1,.36,1) 1s both"></div></div><span style="width:36px;flex-shrink:0;text-align:right;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#9a9a9a">$105</span></div>
+                  </div>
+                </div>
+              </div>
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .6s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">02</span><span style="font-size:13px;font-weight:800;color:#0d0a08">Your rate, your rules.</span></div>
+                <div style="font-size:clamp(16px,1.6vw,21px);font-weight:800;color:#0d0a08;margin-top:3px;letter-spacing:-0.01em">Name your price</div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">Set your rate and your scope; clients meet you on your terms. No race to the bottom, no surprise platform cut.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:18px;margin-top:12px">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                    <div style="font-size:13px;font-weight:700;color:#ffffff">Your rate</div>
+                    <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 9px">$120 / hr</div>
+                  </div>
+                  <div style="position:relative;height:12px;margin-top:16px">
+                    <div style="position:absolute;left:0;right:0;top:5px;height:2px;border-radius:1px;background:rgba(255,255,255,.18)"></div>
+                    <div style="position:absolute;left:0;top:5px;width:50%;height:2px;border-radius:1px;background:#ffffff;transform-origin:left;transform:scaleX(0);animation:growX 1.3s cubic-bezier(.22,1,.36,1) .7s both"></div>
+                    <div style="position:absolute;top:0;width:12px;height:12px;border-radius:50%;background:#ffffff;transform:translateX(-50%);animation:dotTo50 1.3s cubic-bezier(.22,1,.36,1) .7s both,dotPulse 2.4s ease 2.3s infinite"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;margin-top:10px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:.1em;color:#9a9a9a"><span>$40</span><span>$200</span></div>
+                </div>
+              </div>
+              <div style="flex:1 1 {{itemBasis}};min-width:0;opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .75s forwards">
+                <div style="display:flex;align-items:baseline;gap:8px"><span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#8f8a85">03</span><span style="font-size:13px;font-weight:800;color:#0d0a08">Stay independent.</span></div>
+                <div style="font-size:clamp(16px,1.6vw,21px);font-weight:800;color:#0d0a08;margin-top:3px;letter-spacing:-0.01em">Zero lock-in, instant payouts</div>
+                <div style="font-size:13px;color:#5c5751;line-height:1.55;margin-top:6px">Keep your clients, your contracts and your reputation. buildr makes the intro and releases payment — then gets out of the way.</div>
+                <div style="background:#0d0a08;border-radius:14px;padding:18px;margin-top:12px;display:flex;align-items:center;gap:13px">
+                  <div style="width:30px;height:30px;border-radius:50%;background:#ffffff;color:#0d0a08;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;transform:scale(0);animation:popIn .5s cubic-bezier(.34,1.56,.64,1) .8s forwards">✓</div>
+                  <div style="flex:1">
+                    <div style="font-size:14px;font-weight:800;color:#ffffff">$4,800 released</div>
+                    <div style="font-size:11.5px;color:#9a9a9a;margin-top:2px">Acme rebrand · escrow cleared</div>
+                  </div>
+                  <div style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#ffffff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 9px;flex-shrink:0">0% fee</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+      </div>
+      <div onClick="{{ closePanel }}" style="position:absolute;right:24px;bottom:24px;width:46px;height:46px;border-radius:50%;background:#0d0a08;color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;z-index:3;transition:transform .25s ease" style-hover="transform:scale(1.1)">✕</div>
+      </div>
+    </div>
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;idleDelay&quot;: {&quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 7, &quot;min&quot;: 2, &quot;max&quot;: 30, &quot;unit&quot;: &quot;s&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Behavior&quot;},
+  &quot;loopEnabled&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;},
+  &quot;parallaxStrength&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 14, &quot;min&quot;: 0, &quot;max&quot;: 30, &quot;step&quot;: 1, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Explore cards&quot;}
+}">
+class Component extends DCLogic {
+  B = 'transform 1.05s cubic-bezier(.76,0,.24,1)';
+
+  state = {
+    c0t: 'translateY(0)',    c0z: 3, c0tr: this.B,
+    c1t: 'translateY(105%)', c1z: 2, c1tr: this.B,
+    c2t: 'translateY(105%)', c2z: 1, c2tr: this.B,
+    cur: 0, s2: false, s3: false, idle: false,
+    open: null, phase: 'closed', flip: [0, 0, 0],
+    isMobile: false, center: 1, wheel: false, jig: false, sweep: false,
+    geo: { pw: 1000, ph: 700, dx: 0, dy: 0, sx: 0.2, sy: 0.2 },
+    img0O: 1, img1O: 1, img2O: 1
+  };
+
+  componentDidMount() {
+    this.zTop = 3;
+    this.lockUntil = 0;
+    this.carLock = 0;
+    this.timers = [];
+    this.teaseTimers = [];
+
+    this.mq = window.matchMedia('(max-width: 740px)');
+    this.onMq = () => {
+      const m = this.mq.matches;
+      this.setState({ isMobile: m, jig: m && this.state.cur === 2, wheel: false });
+    };
+    this.mq.addEventListener('change', this.onMq);
+    if (this.mq.matches) this.setState({ isMobile: true });
+
+    this.onWheel = (e) => {
+      if (this.state.phase !== 'closed') return;
+      e.preventDefault();
+      this.kick();
+      const now = Date.now();
+      if (now < this.lockUntil || Math.abs(e.deltaY) < 30) return;
+      this.lockUntil = now + 1500;
+      if (e.deltaY > 0) this.next(); else this.prev();
+    };
+    window.addEventListener('wheel', this.onWheel, { passive: false });
+
+    this.onTouchStart = (e) => { this.ty = e.touches[0].clientY; this.tx = e.touches[0].clientX; this.kick(); };
+    this.onTouchMove = (e) => { if (this.state.phase === 'closed') e.preventDefault(); };
+    this.onTouchEnd = (e) => {
+      if (this.state.phase !== 'closed' || this.ty == null) return;
+      const d = this.ty - e.changedTouches[0].clientY;
+      const dx = this.tx - e.changedTouches[0].clientX;
+      this.ty = null;
+      if (this.state.isMobile && this.state.cur === 2 && Math.abs(dx) > Math.abs(d)) {
+        if (Math.abs(dx) < 40) return;
+        this.carGo(dx > 0 ? 1 : -1);
+        return;
+      }
+      const now = Date.now();
+      if (now < this.lockUntil || Math.abs(d) < 50) return;
+      this.lockUntil = now + 1500;
+      if (d > 0) this.next(); else this.prev();
+    };
+    window.addEventListener('touchstart', this.onTouchStart, { passive: true });
+    window.addEventListener('touchmove', this.onTouchMove, { passive: false });
+    window.addEventListener('touchend', this.onTouchEnd);
+
+    this.onKey = (e) => {
+      if (e.key === 'Escape') { this.closePanel(); return; }
+      if (this.state.phase !== 'closed') return;
+      const down = ['ArrowDown', 'PageDown', ' '].includes(e.key);
+      const up = ['ArrowUp', 'PageUp'].includes(e.key);
+      if (!down && !up) return;
+      e.preventDefault();
+      this.kick();
+      const now = Date.now();
+      if (now < this.lockUntil) return;
+      this.lockUntil = now + 1500;
+      if (down) this.next(); else this.prev();
+    };
+    window.addEventListener('keydown', this.onKey);
+
+    fetch('assets/hero-loop-2.mp4')
+      .then((r) => r.blob())
+      .then((b) => {
+        this.blobUrl = URL.createObjectURL(b);
+        document.querySelectorAll('video').forEach((v) => {
+          v.muted = true; v.setAttribute('muted', '');
+          v.playsInline = true; v.setAttribute('playsinline', '');
+          v.loop = true; v.autoplay = true;
+          v.src = this.blobUrl;
+          const p = v.play(); if (p) p.catch(() => {});
+        });
+      })
+      .catch(() => {});
+
+    this.armIdle();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('wheel', this.onWheel);
+    window.removeEventListener('touchstart', this.onTouchStart);
+    window.removeEventListener('touchmove', this.onTouchMove);
+    window.removeEventListener('touchend', this.onTouchEnd);
+    window.removeEventListener('keydown', this.onKey);
+    clearTimeout(this.idleT);
+    (this.timers || []).forEach(clearTimeout);
+    this.clearTease();
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+  }
+
+  carGo(dir) {
+    const now = Date.now();
+    if (now < this.carLock) return;
+    this.carLock = now + 450;
+    this.setState({ center: (this.state.center + (dir > 0 ? 1 : 2)) % 3 });
+    this.kick();
+  }
+
+  clearTease() {
+    (this.teaseTimers || []).forEach(clearTimeout);
+    this.teaseTimers = [];
+  }
+
+  kick() {
+    if (this.state.idle) this.setState({ idle: false });
+    this.armIdle();
+  }
+
+  armIdle() {
+    clearTimeout(this.idleT);
+    const s = (this.props.idleDelay ?? 7) * 1000;
+    this.idleT = setTimeout(() => this.setState({ idle: true }), s);
+  }
+
+  next() {
+    const cur = this.state.cur;
+    const loop = this.props.loopEnabled ?? true;
+    if (cur === 2 && !loop) return;
+    const nxt = (cur + 1) % 3;
+    this.zTop += 1;
+    const stage = {};
+    if (nxt === 1) stage.s2 = false;
+    if (nxt === 2) { stage.s3 = false; stage.flip = [0, 0, 0]; stage.wheel = false; stage.jig = false; stage.center = 1; }
+    stage['c' + nxt + 't'] = 'translateY(105%)';
+    stage['c' + nxt + 'tr'] = 'none';
+    stage['c' + nxt + 'z'] = this.zTop;
+    this.setState(stage, () => {
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        const go = { cur: nxt };
+        go['c' + nxt + 'tr'] = this.B;
+        go['c' + nxt + 't'] = 'translateY(0)';
+        this.setState(go);
+        if (nxt === 1) this.timers.push(setTimeout(() => this.setState({ s2: true }), 380));
+        if (nxt === 2) {
+          this.timers.push(setTimeout(() => this.setState({ s3: true }), 380));
+          this.clearTease();
+          if (this.state.isMobile) {
+            const offs = [0, 60, 120, 180, 240, 300, 360, 420, 480, 545, 615, 695, 790, 905, 1045, 1215, 1420, 1670];
+            this.teaseTimers.push(setTimeout(() => {
+              if (this.state.cur !== 2 || this.state.phase !== 'closed') return;
+              this.setState({ sweep: true });
+            }, 2350));
+            offs.forEach((o) => {
+              this.teaseTimers.push(setTimeout(() => {
+                if (this.state.cur !== 2 || this.state.phase !== 'closed') return;
+                this.setState({ center: (this.state.center + 2) % 3 });
+              }, 2400 + o));
+            });
+            this.teaseTimers.push(setTimeout(() => {
+              if (this.state.cur !== 2) return;
+              this.setState({ sweep: false });
+            }, 2930));
+            this.teaseTimers.push(setTimeout(() => {
+              if (this.state.cur !== 2) return;
+              this.setState({ jig: true });
+            }, 4900));
+            return;
+          }
+          const base = 3100;
+          for (let i = 0; i < 3; i++) {
+            this.teaseTimers.push(setTimeout(() => {
+              if (this.state.cur !== 2 || this.state.phase !== 'closed') return;
+              const f = this.state.flip.slice(); f[i] = 180;
+              this.setState({ flip: f });
+            }, base + i * 780));
+            this.teaseTimers.push(setTimeout(() => {
+              if (this.state.cur !== 2) return;
+              const f = this.state.flip.slice(); f[i] = 0;
+              this.setState({ flip: f });
+            }, base + i * 780 + 600));
+          }
+        }
+      }));
+    });
+  }
+
+  prev() {
+    const cur = this.state.cur;
+    if (cur === 0) return;
+    const p = { cur: cur - 1 };
+    p['c' + cur + 't'] = 'translateY(105%)';
+    p['c' + cur + 'tr'] = this.B;
+    this.setState(p);
+    if (cur === 2) this.clearTease();
+    this.timers.push(setTimeout(() => {
+      if (cur === 1) this.setState({ s2: false });
+      if (cur === 2) this.setState({ s3: false, flip: [0, 0, 0], wheel: false, jig: false, sweep: false });
+    }, 1150));
+  }
+
+  openCard(i, e) {
+    if (this.state.phase !== 'closed') return;
+    if (this.state.isMobile) {
+      const vw = window.innerWidth, vh = window.innerHeight;
+      this.setState({
+        open: i, phase: 'pre',
+        geo: { pw: vw, ph: Math.round(vh * 0.94), dx: 0, dy: 0, sx: 1, sy: 1 }
+      }, () => {
+        requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ phase: 'in' })));
+      });
+      return;
+    }
+    this.clearTease();
+    if (this.state.flip.some((v) => v !== 0)) this.setState({ flip: [0, 0, 0] });
+    const el = e.currentTarget;
+    this.cardEl = el;
+    const r = el.getBoundingClientRect();
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const pw = Math.min(1160, vw * 0.92), ph = Math.min(800, vh * 0.9);
+    const g = {
+      pw, ph,
+      dx: Math.round(r.left + r.width / 2 - vw / 2),
+      dy: Math.round(r.top + r.height / 2 - vh / 2),
+      sx: +(r.width / pw).toFixed(4),
+      sy: +(r.height / ph).toFixed(4)
+    };
+    const st = { open: i, phase: 'pre', geo: g };
+    st['img' + i + 'O'] = 0;
+    this.setState(st, () => {
+      requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ phase: 'in' })));
+    });
+  }
+
+  closePanel() {
+    if (this.state.phase !== 'in') return;
+    if (this.state.isMobile) {
+      this.setState({ phase: 'out' });
+      this.timers.push(setTimeout(() => this.setState({ open: null, phase: 'closed' }), 640));
+      this.armIdle();
+      return;
+    }
+    const idx = this.state.open;
+    let g = this.state.geo;
+    if (this.cardEl) {
+      const r = this.cardEl.getBoundingClientRect();
+      const vw = window.innerWidth, vh = window.innerHeight;
+      g = { ...g,
+        dx: Math.round(r.left + r.width / 2 - vw / 2),
+        dy: Math.round(r.top + r.height / 2 - vh / 2),
+        sx: +(r.width / g.pw).toFixed(4),
+        sy: +(r.height / g.ph).toFixed(4)
+      };
+    }
+    this.setState({ phase: 'out', geo: g });
+    this.timers.push(setTimeout(() => {
+      this.setState({ open: null, phase: 'closed' });
+      this.timers.push(setTimeout(() => this.setState({ ['img' + idx + 'O']: 1 }), 60));
+    }, 800));
+    this.armIdle();
+  }
+
+  carVals(s) {
+    const out = {};
+    out.mcTr = s.sweep
+      ? 'transform .13s linear,filter .13s linear'
+      : 'transform .55s cubic-bezier(.3,.8,.3,1),filter .55s ease';
+    for (let i = 0; i < 3; i++) {
+      const pos = (i - s.center + 3) % 3;
+      out['mc' + i + 'T'] = pos === 0
+        ? 'translate(-50%,-50%) scale(1)'
+        : (pos === 1
+          ? 'translate(calc(-50% + 42vw),-50%) scale(.6)'
+          : 'translate(calc(-50% - 42vw),-50%) scale(.6)');
+      out['mc' + i + 'Z'] = pos === 0 ? 3 : 1;
+      out['mc' + i + 'F'] = pos === 0 ? 'none' : 'blur(3px) brightness(.85)';
+      out['mAnim' + i] = s.jig && pos === 0 && s.phase === 'closed'
+        ? 'mJiggle 4s ease-in-out 1.2s infinite' : 'none';
+      out['mTap' + i] = () => {
+        if (this.state.phase !== 'closed') return;
+        const p = (i - this.state.center + 3) % 3;
+        if (p === 1) this.carGo(1);
+        else if (p === 2) this.carGo(-1);
+        else this.openCard(i, null);
+      };
+    }
+    return out;
+  }
+
+  renderVals() {
+    const s = this.state;
+    const g = s.geo;
+    return {
+      c0t: s.c0t, c0z: s.c0z, c0tr: s.c0tr,
+      c1t: s.c1t, c1z: s.c1z, c1tr: s.c1tr,
+      c2t: s.c2t, c2z: s.c2z, c2tr: s.c2tr,
+      s2t: s.s2 ? 'translateY(0)' : 'translateY(70px)',
+      s2o: s.s2 ? 1 : 0,
+      s3t: s.s3 ? 'translateY(0)' : 'translateY(60px)',
+      s3o: s.s3 ? 1 : 0,
+      boxT: s.s3 ? 'translate3d(0,0,0) rotate(0deg)' : 'translate3d(-28px,90px,0) rotate(-3deg)',
+      boxO: s.s3 ? 1 : 0,
+      idleO: s.idle && s.phase === 'closed' ? 1 : 0,
+      ovDisplay: s.phase === 'closed' ? 'none' : 'block',
+      backO: s.phase === 'in' ? 1 : 0,
+      pW: g.pw, pH: g.ph,
+      pT: s.isMobile
+        ? (s.phase === 'in' ? 'translateY(0px)' : 'translateY(120vh)')
+        : (s.phase === 'in'
+          ? 'translate(0px, 0px) scale(1, 1) rotateY(180deg)'
+          : 'translate(' + g.dx + 'px, ' + g.dy + 'px) scale(' + g.sx + ', ' + g.sy + ') rotateY(0deg)'),
+      pTr: s.isMobile
+        ? (s.phase === 'in' ? 'transform .85s cubic-bezier(.3,1.18,.4,1)' : (s.phase === 'out' ? 'transform .6s cubic-bezier(.55,.06,.55,.9)' : 'none'))
+        : (s.phase === 'in'
+          ? 'transform .92s cubic-bezier(.3,.85,.25,1)'
+          : (s.phase === 'out' ? 'transform .78s cubic-bezier(.5,.06,.35,1)' : 'none')),
+      ffBg: "url('" + ['assets/illu-whiteboard.png', 'assets/illu-desk.png', 'assets/illu-office.png'][s.open ?? 0] + "')",
+      ffImgO: s.phase === 'pre' ? 1 : 0,
+      ffImgTr: s.phase === 'pre' ? 'none' : 'opacity .45s ease .1s',
+      ffRad: Math.round(22 / g.sx) + 'px / ' + Math.round(22 / g.sy) + 'px',
+      ffBadgeX: Math.round(14 / g.sx) + 'px',
+      ffBadgeY: Math.round(14 / g.sy) + 'px',
+      ffBadgeW: Math.round(42 / g.sx) + 'px',
+      ffBadgeH: Math.round(42 / g.sy) + 'px',
+      ffBadgeF: Math.round(26 / g.sy) + 'px',
+      showJobs: s.open === 0, showCof: s.open === 1, showFre: s.open === 2,
+      openCard0: (e) => this.openCard(0, e),
+      openCard1: (e) => this.openCard(1, e),
+      openCard2: (e) => this.openCard(2, e),
+      closePanel: () => this.closePanel(),
+      img0O: s.img0O, img1O: s.img1O, img2O: s.img2O,
+      flip0: 'perspective(1100px) rotateY(' + s.flip[0] + 'deg)',
+      flip1: 'perspective(1100px) rotateY(' + s.flip[1] + 'deg)',
+      flip2: 'perspective(1100px) rotateY(' + s.flip[2] + 'deg)',
+      flipTr: 'transform .6s cubic-bezier(.45,.08,.3,1)',
+      rowDisp: s.isMobile ? 'none' : 'flex',
+      carDisp: s.isMobile ? 'block' : 'none',
+      itemBasis: s.isMobile ? '100%' : '42%',
+      panelAlign: s.isMobile ? 'left' : 'center',
+      ovAlign: s.isMobile ? 'flex-end' : 'center',
+      panelRad: s.isMobile ? '22px 22px 0 0' : '26px',
+      panelPad: s.isMobile ? '18px 16px 100px' : 'clamp(22px,4vh,38px) clamp(22px,3.6vw,46px) 96px',
+      ffDisp: s.isMobile ? 'none' : 'block',
+      backT: s.isMobile ? 'none' : 'rotateY(180deg)',
+      ...this.carVals(s),
+      idleT: s.idle ? 'translateY(0)' : 'translateY(24px)',
+      idleText: s.cur === 1 ? '#9a9a9a' : '#8f8f8f',
+      idleTrack: s.cur === 1 ? 'rgba(13,10,8,.16)' : 'rgba(255,255,255,.22)',
+      idleDash: s.cur === 1 ? '#1a1a1a' : '#ffffff',
+      cardMove: (e) => {
+        const card = e.currentTarget;
+        const img = card.querySelector('img');
+        if (!img) return;
+        const r = card.getBoundingClientRect();
+        const str = this.props.parallaxStrength ?? 14;
+        const x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+        const y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        img.style.transform = 'scale(1.12) translate(' + (-x * str).toFixed(1) + 'px,' + (-y * str).toFixed(1) + 'px)';
+      },
+      cardLeave: (e) => {
+        const img = e.currentTarget.querySelector('img');
+        if (img) img.style.transform = 'scale(1.12)';
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
